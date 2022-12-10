@@ -1,3 +1,1 @@
-1. Change the way the executable accesses the Java files.
-2. Delete bin
-3. Fix menu UI
+1. Figure out what's wrong with class files (src classes are not used but are still created on compilation)

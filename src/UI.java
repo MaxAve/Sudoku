@@ -52,7 +52,7 @@ public class UI {
         public void displayText(Graphics g) {
             g.setFont(new Font("Arial", Font.BOLD, fontSize));
             g.setColor(new Color(0, 75, 155));
-            g.drawString(text, x, y+10); // Shadow
+            g.drawString(text, x, y+this.fontSize/20); // Shadow
             g.setColor(new Color(0, 175, 255));
             g.drawString(text, x, y); // Actual text
         }

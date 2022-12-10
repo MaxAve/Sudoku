@@ -30,7 +30,6 @@ public class Panel extends JPanel implements ActionListener {
 	public static UI MenuScreen;
 	public static UI.UIButton playButton;
 	public static UI.UIButton helpButton;
-	public static UI.UIButton settingsButton;
 	public static UI.UIText menuTitle;
 	public static UI.UIText gameTitle;
 	
@@ -58,19 +57,16 @@ public class Panel extends JPanel implements ActionListener {
 		helpButton.uMargin = 65;
 		MenuScreen.add(helpButton);
 
-		settingsButton = new UI.UIButton(SCREEN_WIDTH/2, SCREEN_HEIGHT - 500, 500, 100, "Game Settings");
-		settingsButton.lMargin = 0;
-		settingsButton.uMargin = 65;
-		MenuScreen.add(settingsButton);
-
 		gameTitle = new UI.UIText("SUDOKU", SCREEN_WIDTH/20);
 		gameTitle.setXPosition("mid");
 		gameTitle.y = SCREEN_HEIGHT/10;
+		gameTitle.x += 50;
 		MenuScreen.add(gameTitle);
 
-		menuTitle = new UI.UIText("Menu", SCREEN_WIDTH/20);
+		menuTitle = new UI.UIText("menu", SCREEN_WIDTH/30);
 		menuTitle.setXPosition("mid");
-		menuTitle.y = SCREEN_HEIGHT/10 + 200;
+		menuTitle.y = SCREEN_HEIGHT/10 + 500;
+		menuTitle.x += 10;
 		MenuScreen.add(menuTitle);
 	}
 	
@@ -353,6 +349,9 @@ public class Panel extends JPanel implements ActionListener {
 				Sudoku.resetGrid();
 				startNewGame();
 				Sudoku.notes.clear();
+			});
+			helpButton.onClick(()->{
+				changeScreen("instructions");
 			});
 		}
 		
