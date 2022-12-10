@@ -101,6 +101,8 @@ public class Sudoku {
 	}
 	
 	public static void placeClues() {
+		System.out.println("[Sudoku] Placing clues...");
+
 		int maximumNums = 0;
 		if(difficulty.equals("easy")) {
 			maximumNums = 60;

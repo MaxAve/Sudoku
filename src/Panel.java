@@ -35,6 +35,7 @@ public class Panel extends JPanel implements ActionListener {
 	public static UI.UIText gameTitle;
 	
 	Panel() {
+		System.out.println("[Sudoku] Initializing Panel...");
 		random = new Random();
 		timer = new Timer(DELAY, this);
 		this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
@@ -57,8 +58,8 @@ public class Panel extends JPanel implements ActionListener {
 		helpButton.uMargin = 65;
 		MenuScreen.add(helpButton);
 
-		settingsButton = new UI.UIButton(SCREEN_WIDTH/2, SCREEN_HEIGHT - 500, 500, 100, "Settings");
-		settingsButton.lMargin = 200;
+		settingsButton = new UI.UIButton(SCREEN_WIDTH/2, SCREEN_HEIGHT - 500, 500, 100, "Game Settings");
+		settingsButton.lMargin = 0;
 		settingsButton.uMargin = 65;
 		MenuScreen.add(settingsButton);
 
